@@ -1,4 +1,3 @@
-/* Основні стилі */
 * {
     margin: 0;
     padding: 0;
@@ -45,6 +44,7 @@ header {
     background: rgba(255,255,255,0.1);
 }
 
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -69,13 +69,6 @@ header {
     border-radius: 50%;
 }
 
-.footer-logo-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
 .brand-name {
     font-size: 17px;
     font-weight: 500;
@@ -93,10 +86,17 @@ header {
     opacity: 0.8;
 }
 
-.search-container {
-    flex: 1;
-    max-width: 350px;
+/* Cart + Search Group */
+.cart-search-group {
+    display: flex;
+    align-items: center;
+    gap: 40px;
     margin: 0 20px;
+}
+
+/* Search */
+.search-container {
+    width: 300px;
 }
 
 .search-input {
@@ -106,8 +106,49 @@ header {
     border-radius: 4px;
     font-size: 14px;
     background: rgba(255,255,255,0.95);
+    outline: none;
 }
 
+/* Header Cart Button */
+.header-cart-btn {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.header-cart-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.1);
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4444;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+/* Phone Button */
 .phone-btn {
     background: none;
     border: none;
@@ -311,33 +352,52 @@ header {
     font-weight: 600;
 }
 
-.buy-btn {
+/* Cart Button на картках */
+.cart-btn {
     background: #4caf50;
     border: none;
     color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 500;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.2s;
+    flex-shrink: 0;
 }
 
-.buy-btn:hover {
+.cart-btn:hover {
     background: #45a049;
+    transform: scale(1.1);
+}
+
+.cart-btn:active {
+    transform: scale(0.95);
 }
 
 /* Partners Section */
+.partners-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
 .partner-panel {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: white;
     padding: 20px 30px;
     border-radius: 8px;
-    margin-bottom: 30px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     text-decoration: none;
     transition: all 0.3s;
     cursor: pointer;
+    min-width: 180px;
+    height: 80px;
 }
 
 .partner-panel:hover {
@@ -347,6 +407,10 @@ header {
 
 .partner-logo {
     max-width: 200px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     display: block;
 }
 
@@ -354,7 +418,7 @@ header {
 footer {
     background: linear-gradient(135deg, #5b8ba8 0%, #4a7a96 100%);
     color: white;
-    padding: 30px 40px;
+    padding: 40px 40px;
     margin-top: 40px;
     border-radius: 5px;
 }
@@ -404,17 +468,12 @@ footer {
     border-radius: 50%;
 }
 
-.footer-logo span {
-    font-size: 20px;
-    font-weight: 500;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     footer {
         padding: 30px 20px;
     }
-    
+
     .footer-content {
         gap: 30px;
         grid-template-columns: 1fr;
@@ -424,12 +483,16 @@ footer {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         gap: 12px;
     }
-    
+
     .product-image {
         height: 140px;
     }
 
     .search-container {
         max-width: 200px;
+    }
+
+    .about-link {
+        display: none;
     }
 }
