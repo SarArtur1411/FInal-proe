@@ -99,6 +99,22 @@ header {
     width: 300px;
 }
 
+.cat-img {
+    display: flex;
+    width: 100%;
+}
+
+.image-main {
+    margin-right: %;
+    margin-left: 20%;
+    gap: 100%;
+}
+
+.img {
+    width: 515px;
+    border-radius: 5px;
+}
+
 .search-input {
     width: 100%;
     padding: 7px 15px;
