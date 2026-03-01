@@ -86,7 +86,6 @@ header {
     opacity: 0.8;
 }
 
-/* Cart + Search Group */
 .cart-search-group {
     display: flex;
     align-items: center;
@@ -94,7 +93,6 @@ header {
     margin: 0 20px;
 }
 
-/* Search */
 .search-container {
     width: 300px;
 }
@@ -105,7 +103,6 @@ header {
 }
 
 .image-main {
-    margin-right: %;
     margin-left: 20%;
     gap: 100%;
 }
@@ -125,7 +122,6 @@ header {
     outline: none;
 }
 
-/* Header Cart Button */
 .header-cart-btn {
     background: rgba(255,255,255,0.15);
     border: 1px solid rgba(255,255,255,0.4);
@@ -164,7 +160,6 @@ header {
     transition: transform 0.2s;
 }
 
-/* Phone Button */
 .phone-btn {
     background: none;
     border: none;
@@ -174,7 +169,6 @@ header {
     padding: 5px;
 }
 
-/* Sidebar */
 .sidebar {
     position: fixed;
     left: -300px;
